@@ -1,0 +1,22 @@
+---
+layout: layouts/base.njk
+section: home
+---
+
+<div class="container">
+    {{ layoutContent | safe }}
+</div>
+
+<div class="container">
+<h4>Recent Posts</h4>
+{% set postslist = collections.postsLatest %}
+    {% for post in postslist | reverse %}
+    <a class="post-item" href="{{ post.url | url }}">
+        <h2 class="home-title">{{ post.data.title }}</h2>
+    </a>
+    {% endfor %}
+</div>
+
+<div class="container">
+    <p><a href="/posts">See all posts →</a></p>
+</div>

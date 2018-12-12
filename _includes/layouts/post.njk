@@ -1,0 +1,45 @@
+---
+layout: layouts/base-post.njk
+section: post
+---
+
+<div class="container">
+
+    <h1>{{ title }}</h1>
+
+    <p>
+      <small>
+        <time datetime="{{ date | machineDate }}">{{ date | readableDate }}</time>
+      </small>
+    </p>
+
+    {% if tags %}
+      <p>
+      {% for tag in tags %}
+        {%- if tag != "post" -%}
+          {% set tagUrl %}/tags/{{ tag }}/{% endset %}
+          <a href="{{ tagUrl | url }}" rel="tag">{{ tag }}</a>
+        {%- endif -%}
+      {% endfor %}
+      </p>
+    {% endif %}
+
+    <hr><br>
+
+    {{ layoutContent | safe }}
+
+</div>
+
+<div class="container">
+<h4>Recent Posts</h4>
+{% set postslist = collections.postsLatest %}
+    {% for post in postslist | reverse %}
+    <a class="post-item" href="{{ post.url | url }}">
+        <h2 class="home-title">{{ post.data.title }}</h2>
+    </a>
+    {% endfor %}
+</div>
+
+<div class="container">
+    <p><a href="/posts">← Back to all posts</a></p>
+</div>

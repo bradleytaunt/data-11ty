@@ -1,0 +1,20 @@
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="index,follow">
+  <title>{{ title }} | {{ metadata.title }}</title>
+  <link rel="icon" href="{{ metadata.siteUrl }}/static/images/favicon.png" type="image/png">
+  {% if summary %}
+    <meta name="description" content="{{ summary | safe }}">
+  {% endif %}
+  {% set css %}
+    {% include "assets/css/inline.css" %}
+  {% endset %}
+  <style>{{ css | cssmin | safe }}</style>
+  {% set js %}
+    {% include "assets/js/inline.js" %}
+  {% endset %}
+  <script>{{ js | jsmin | safe }}</script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.bundle.min.js"></script>
+  <script>Chart.defaults.global.defaultFontFamily = 'Consolas';</script>
+</head>

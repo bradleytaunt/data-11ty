@@ -1,0 +1,37 @@
+{
+  "name": "Data",
+  "version": "1.0.0",
+  "description": "A custom eleventy template with a focus on data and reporting.",
+  "scripts": {
+    "build": "npx eleventy",
+    "watch": "npx eleventy --watch",
+    "debug": "DEBUG=* npx eleventy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bradleytaunt/data-11ty"
+  },
+  "author": {
+    "name": "Bradley Taunt",
+    "email": "bradleytaunt@gmail.com",
+    "url": "https://www.bradleytaunt.com/"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bradleytaunt/data-11ty/issues"
+  },
+  "homepage": "http://stacks11ty.surge.sh",
+  "devDependencies": {
+    "@11ty/eleventy": "^0.5.0",
+    "luxon": "^1.0.0",
+    "markdown-it": "^8.4.1",
+    "markdown-it-anchor": "^4.0.0"
+  },
+  "dependencies": {
+    "clean-css": "^4.1.11",
+    "feather-icons": "^4.7.3",
+    "html-minifier": "^3.5.19",
+    "local-web-server": "^2.6.0",
+    "uglify-js": "^3.4.5"
+  }
+}

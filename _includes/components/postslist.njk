@@ -1,0 +1,8 @@
+<div class="container">
+	{% set postslist = collections.posts %}
+	    {% for post in postslist | reverse %}
+	    <a class="post-item" href="{{ post.url | url }}">
+	        <h2 class="home-title">{{ post.data.title }}</h2>
+	    </a>
+	    {% endfor %}
+</div>

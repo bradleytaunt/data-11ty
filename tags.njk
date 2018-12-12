@@ -1,0 +1,24 @@
+---
+pagination:
+  data: collections
+  size: 1
+  alias: tag
+  filter:
+    - all
+    - nav
+    - post
+    - posts
+permalink: /tags/{{ tag }}/
+layout: layouts/base.njk
+---
+
+<div class="container">
+    <h1>Tagged “{{ tag }}”</h1>
+</div>
+
+{% set postslist = collections[ tag ] %}
+{% include "components/postslist.njk" %}
+
+<div class="container">
+  <p><a href="{{ '/' | url }}">← Back to all posts</a></p>
+</div>
