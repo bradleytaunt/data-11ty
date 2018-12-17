@@ -4,7 +4,7 @@ Open source <a href="11ty.io">11ty.io</a> theme designed for reporting & data-vi
 
 ### Demo
 
-A live demo can be found here: <a href="http://data11ty.surge.sh/">data11ty.surge.sh</a>
+A live demo can be found here: <a href="https://data11ty.netlify.com/">data11ty.netlify.com</a>
 
 ### Setup
 
